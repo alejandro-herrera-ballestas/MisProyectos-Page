@@ -1,0 +1,52 @@
+body{
+    background-color: black;       /* Color de fondo */
+    font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif; /*Fuente de texto*/
+    header {color: cyan; font-size: 60px;}     
+    h3,h4, a {color: skyblue;}     
+    p,li {color: rgb(235, 232, 232); font-size: 18px;}   
+
+}    
+    
+   .contenedor-padre {
+  display: flex; /* Esto pone los hijos uno al lado del otro */
+  gap: 20px;    /* Espacio entre los bloques */
+  align-items: flex-start;
+  padding-top: 50px;    /* Espacio alrededor del contenedor */
+  flex-wrap: wrap; /* Permite que los bloques se muevan a la siguiente línea si no caben en una sola fila */
+}
+
+.mi-bloque {
+  background-color: rgba(255, 255, 255, 0.1);    /* color de fondo */
+  border-radius: 18px;        /* bordes redondeados */
+  padding: 20px;             /* espacio interno */
+  width: 300px; /* Ancho fijo para que parezca bloque */
+  flex: 1; /* Permite que los bloques se expandan para llenar el espacio disponible */
+  min-width: none; /* Permite que el bloque se reduzca si es necesario */
+}
+
+.mi-bloque :hover{
+    transform: translateY(-10px);
+    transition: transform 0.3s ease; /* Suaviza la animación */
+    border-color: cyan;
+}
+
+.mi-bloque a {
+  color: cyan; /* Color de los enlaces */
+}
+
+#videoFondo {
+  position: fixed;   /* Lo fija a la pantalla */
+  top: 0%;        
+  left: 0%;         
+  width: 100%;       
+  height: 100%;      
+  object-fit: cover; /* Recorta el video para que llene la pantalla sin estirarse */
+  z-index: -1;       /* Lo manda detrás de todo el contenido */
+  opacity: 0.6;      /* Le da un toque de transparencia para que el texto se lea mejor */
+}
+
+hr{
+    border: 1px solid cyan; /* Color y grosor de la línea */
+    margin: 18px 0; /* Espacio arriba y abajo de la línea */
+}
+
